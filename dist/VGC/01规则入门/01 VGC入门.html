@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VGC入门</title>
+  <link rel="stylesheet" href="../../styles.css?v=1762160083876">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+  
+    <nav class="navbar">
+      <div class="container">
+        <a href="../../index.html" class="logo">🎮 宝可梦VGC入门学习</a>
+        <div class="nav-links">
+          <a href="../../index.html">首页</a>
+        </div>
+      </div>
+    </nav>
+  
+  <main class="container">
+    
+    <article class="article-content">
+      <header class="article-header">
+        <h1>VGC入门</h1>
+        <div class="article-meta">
+          <span class="date">📅 2025-11-03</span>
+        </div>
+      </header>
+      <div class="markdown-body">
+        <h1>竞技双打基本框架与核心机制</h1>
+<h2>I. VGC概述</h2>
+<h3>A. 什么是VGC？</h3>
+<p>电子游戏冠军赛（Video Game Championships, VGC）是宝可梦官方认可的、基于双打模式的标准竞技赛制。VGC规则的核心目标是提供一个平衡、透明且具有时间限制的对战环境，以测试训练家在资源管理、队伍构建和临场决策方面的能力。</p>
+<h3>B. VGC的规则基础</h3>
+<p>现代VGC建立在一系列严格的规则之上，旨在确保对战的公平性和高效性。</p>
+<h4>队伍表限制与选择阶段</h4>
+<p>VGC要求训练家在赛前预先登录<strong>6只</strong>宝可梦组成的队伍（Team Sheet）。在实际对战开始前，训练家会进入队伍预览（Team Preview）阶段，查看对手的6只宝可梦。核心规则要求训练家从这6只登录的宝可梦中选择<strong>4只</strong>参加双打对战。这一“6选4”的机制是VGC策略深度的核心。在选择阶段，训练家必须根据对手可能的威胁、联防组合以及速度控制手段，准确判断对手最有可能派出的4只宝可梦，并针对性地选择自己的首发和后备。</p>
+<p><img src="../../VGC/pics/Pasted%20image%2020251103154834.png" alt="Pasted image 20251103154834.png"></p>
+<h4>时间控制与竞技节奏</h4>
+<p>VGC引入了严格的时间控制机制，这极大地影响了对战的节奏和可行的战略类型。标准的VGC对战设有总时间限制（通常为20分钟）和回合操作时间限制（通常为45秒）。对战时间限制的设定，使得ORAS休闲对战中可能出现的拖延战术或过度消耗策略在VGC中变得效率低下甚至不可取。因此，VGC环境更偏向于高效率、高压力的进攻、快速的资源交换以及能够在有限回合内完成目标的高爆发型队伍。</p>
+<p> <strong>道具重复限制：</strong> 队伍中不允许携带相同的道具。这迫使训练家为队伍中的每一只宝可梦选择不同的、优化的携带道具，从而增加队伍的战术多样性和深度。</p>
+<p><strong>精灵重复限制：</strong> 在同一支队伍中，你不能携带两只或以上拥有完全相同<strong>全国图鉴编号</strong>的宝可梦。</p>
+<h2>II. VGC基本框架：标准双打模式解析</h2>
+<h3>A. 队伍构成：6选4</h3>
+<p>在“6选4”规则下，队伍的职能分配变得尤为重要。一套完整的VGC队伍通常需要包含：</p>
+<ol>
+<li><p><strong>速度控制启动者：</strong> 能够施加<strong>戏法空间</strong>或<strong>顺风</strong>等招式的宝可梦，决定对战的主动权。</p>
+</li>
+<li><p><strong>核心输出手：</strong> 队伍中能力值高、打击面广，能够有效利用<strong>极巨化</strong>或<strong>太晶化</strong>进行爆发的角色。</p>
+</li>
+<li><p><strong>支持与控场手：</strong> 利用<strong>击掌奇袭</strong>、<strong>威吓</strong>、<strong>电磁波</strong>等招式或特性来干扰对手，保护核心输出手。</p>
+</li>
+<li><p><strong>替补与后备：</strong> 用于应对核心输出手被克制的情况，或在残局阶段进行收割。</p>
+</li>
+</ol>
+<p>训练家在选择首发宝可梦时，需要考虑它们的站位以及与其他宝可梦之间的联防和配合。错误的队伍选择可能导致队伍在开局就陷入被动，因为对手可以利用站位优势进行集火或有效的控场。</p>
+<h3>B. 速度机制与站位策略</h3>
+<p>在双打对战中，站位策略的核心是速度机制的控制。ORAS时代的双打对战中，速度虽然重要，但现代VGC将其提升到了绝对必要的地位。队伍必须具备至少一种可靠的速度干预手段。</p>
+<p><strong>速度控制是队伍的基石：</strong></p>
+<ul>
+<li><p><strong>速度线划分：</strong> VGC环境中的宝可梦被清晰地划分为高速、中速和低速（戏法空间）三档。训练家需要精准计算速度个体值（IV）和努力值（EV），确保在启用速度控制时能够超越或慢于目标。</p>
+</li>
+<li><p><strong>速度控制手段：</strong> <strong>顺风</strong>（提升我方速度）和<strong>戏法空间</strong>（交换速度优先级）是两种最常见的全局速度控制手段，但其他如<strong>电场</strong>（配合特定特性）、<strong>冰旋</strong>（降低对手速度）也发挥着重要作用。</p>
+</li>
+</ul>
+<p>双打对战中，招式的目标选择（Targeting）是关键。训练家必须判断何时使用单体招式（Single Target）集中火力秒杀对手的关键威胁，以及何时使用范围招式（Spread Move）对对手场上两只宝可梦施加压力。优秀的站位可以确保己方宝可梦能够同时受到支持手的保护并施加有效输出，同时避免被对手的范围招式双杀。</p>
+<h2>III. 核心机制介绍：第九世代的太晶化系统</h2>
+<p>太晶化（Terastallization）是第九世代引入的核心机制，它作为对战中第二个且更具策略性的单次使用资源。与极巨化持续三回合不同，太晶化效果一旦触发，将<strong>持续至对战结束</strong>，且每场对战只能使用<strong>一次</strong>。</p>
+<h3>A. 太晶化的触发与属性转变</h3>
+<p>太晶化在对战中最大的特点是宝可梦的属性会变为其<strong>太晶属性</strong>。原有的所有属性，包括双属性，都会被这个新的太晶属性完全取代。宝可梦将像宝石一样发出耀眼的光芒。</p>
+<p>这种属性的完全转变提供了前所未有的防御灵活性和进攻的突然性。例如，一只原本是岩石/恶属性的班基拉斯，对战中可能存在被格斗系招式四倍克制的风险。通过太晶化变为幽灵属性后，其弱点属性会随之改变，并且可以获得对格斗系招式的免疫效果。这一机制允许训练家在对战中瞬间清除宝可梦的致命弱点，或意外地抵抗原本无法承受的打击，是现代VGC中最高的防御性工具。</p>
+<h3>B. 太晶属性：进攻性与防御性的选择</h3>
+<p>太晶化的应用可以归纳为两种核心策略：进攻性太晶化和防御性太晶化。</p>
+<ol>
+<li><p><strong>进攻性太晶化（STAB最大化）：</strong> 训练家选择与宝可梦原有属性一致的太晶属性。太晶化后，该属性的招式会获得更高的<strong>属性一致加成（STAB）</strong>，使得输出能力达到极致，能够突破对手的联防体系，实现关键回合的一击必杀（OHKO）。</p>
+</li>
+<li><p><strong>防御性太晶化（弱点修补）：</strong> 训练家选择一个能有效补足自身弱点或提供免疫的太晶属性。这种选择旨在保护核心输出手，使其能够承受致命打击，或者利用属性反转来克制对手的特定威胁。</p>
+</li>
+</ol>
+<p>由于对手在太晶化触发之前无法得知宝可梦的太晶属性，太晶化成为了双打中最强大的“烟雾弹”和“反击工具”。这种不可预测性增加了VGC中的心理博弈深度，训练家必须观察和猜测对手可能隐藏的太晶属性，以避免关键宝可梦被突然的属性转变所克制。</p>
+<h3>C. 关键招式分析：太晶爆发</h3>
+<p><strong>太晶爆发</strong>（Tera Blast）是一个可学习的一般属性招式。当使用者处于<strong>太晶化</strong>状态时，该招式会发生机制转换，变为与<strong>太晶属性</strong>相同的属性，并发挥强大的力量 2。</p>
+<p><strong>太晶爆发</strong>最独特的机制在于其伤害计算方式：它会根据出招的宝可梦的<strong>攻击</strong> 和<strong>特攻</strong>中<strong>数值较高的一项</strong>来决定伤害类型 。</p>
+<p>在ORAS时代，由于努力值（EV）需要均衡分配，混合攻击手（Mixed Attackers）的效率通常低于纯粹的物理或特殊攻击手。然而，太晶爆发机制通过自动选择最高伤害属性解决了这一效率问题。这使得训练家可以将太晶爆发作为核心的属性覆盖招式。例如，一只高物理攻击的宝可梦可以太晶化为火属性，并利用其高物攻计算的<strong>特殊火属性太晶爆发</strong>来打击对手物理防御极高的宝可梦。这种灵活性极大地扩展了队伍的伤害覆盖面，使得太晶化成为混合进攻策略的核心。</p>
+<p>太晶化机制与太晶爆发分析</p>
+<table>
+<thead>
+<tr>
+<th><strong>太晶化元素</strong></th>
+<th><strong>核心作用</strong></th>
+<th><strong>战略收益/风险</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>属性转变</strong></td>
+<td>宝可梦属性即时变为“太晶属性” 2</td>
+<td>极大地改变弱点和抗性，实现攻防上的瞬间逆转。</td>
+</tr>
+<tr>
+<td><strong>STAB增强</strong></td>
+<td>太晶属性的招式威力进一步提高</td>
+<td>进攻性太晶化的核心，用于突破对手的联防体系。</td>
+</tr>
+<tr>
+<td><strong>太晶爆发（Tera Blast）</strong></td>
+<td>使用攻击或特攻中较高的一项决定伤害 2</td>
+<td>灵活适应物理或特殊防御，优化混合攻击手和打击面。</td>
+</tr>
+<tr>
+<td><strong>资源限制</strong></td>
+<td>仅限一次，持续至对战结束</td>
+<td>最高的资源管理要求，一旦使用则无法反悔。</td>
+</tr>
+</tbody></table>
+<h3>D. 太晶化在VGC中的资源管理与时机</h3>
+<p>太晶化在VGC中的资源管理要求极高。它是一个永久生效、一次性的机制，相比极巨化的三回合窗口，太晶化一旦使用便无法撤销，训练家必须精确判断太晶化的时机。</p>
+<p>太晶化的时机通常有两个核心目的：一是实现爆发性的进攻，确杀对手的关键威胁；二是提供决定性的防御，抵御对手原本可以致命的打击。由于其稀缺性和持久性，太晶化往往被视为决定对战胜负的最终底牌，其使用与否、以及何时使用，是现代VGC中最重要的决策之一。</p>
+<h2>IV. 现代VGC核心战略概念速览 (A Quick Look at Modern VGC Core Strategic Concepts)</h2>
+<p>本节列出现代VGC中常用的核心战略概念名称。</p>
+<h3>A. 速度控制与干预</h3>
+<ul>
+<li><p>戏法空间</p>
+</li>
+<li><p>顺风</p>
+</li>
+<li><p>先制技能</p>
+</li>
+<li><p>冰冻之风/电磁波等的控速</p>
+</li>
+</ul>
+<h3>B. 联防体系与核心防御手段</h3>
+<ul>
+<li><p>守住/广域防守</p>
+</li>
+<li><p>威吓 </p>
+</li>
+<li><p>击掌奇袭与控场</p>
+</li>
+<li><p>清除之烟，黑雾的反强化</p>
+</li>
+<li><p>光墙/反射壁/极光幕</p>
+</li>
+<li><p>抛下狠话/急速折返的轮转</p>
+</li>
+</ul>
+<h3>C. 场地/气候队伍的演变</h3>
+<ul>
+<li><p>电场/超能场/薄雾场/青草场体系</p>
+</li>
+<li><p>雪天/沙暴体系的耐久增强（极光幕/拨沙）</p>
+</li>
+<li><p>晴天/雨天的高速高攻体系 （叶绿素/悠游自如）</p>
+</li>
+</ul>
+<h2>V. 核心工具箱：必备资源</h2>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>功能</th>
+<th>链接/备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Pokémon Showdown</strong></td>
+<td>模拟对战，天梯练习</td>
+<td>showdown.pokemonshowdown.com</td>
+</tr>
+<tr>
+<td><strong>损伤计算器</strong></td>
+<td>秒杀/生存计算</td>
+<td>Nerd of Now&#39;s Calc / Easy Damage Calc</td>
+</tr>
+<tr>
+<td><strong>VGC Multic</strong></td>
+<td>速度控制/节奏规划</td>
+<td>速度线计算神器</td>
+</tr>
+<tr>
+<td><strong>Lab Mouse</strong></td>
+<td>元数据/胜率趋势</td>
+<td>分析热门队</td>
+</tr>
+<tr>
+<td><strong>PASS Spreadsheet</strong></td>
+<td>回放分析（Protect使用率、胜率统计）</td>
+<td>Palia Academy工具</td>
+</tr>
+<tr>
+<td><strong>VGC Top Cut Explorer</strong></td>
+<td>Top 164队伍浏览</td>
+<td>区域赛灵感</td>
+</tr>
+<tr>
+<td><strong>Munch Stats</strong></td>
+<td>太晶/道具/EV统计</td>
+<td>优于Pikalytics</td>
+</tr>
+<tr>
+<td><strong>VGC Paste Repository</strong></td>
+<td>所有队伍存档</td>
+<td>Reg H实时更新</td>
+</tr>
+<tr>
+<td><strong>Victory Road</strong></td>
+<td>文章/租借/赛事资讯</td>
+<td>Twitter跟进报名</td>
+</tr>
+<tr>
+<td><strong>RK9.gg</strong></td>
+<td>官方报名/队伍提交</td>
+<td>区域/国际必用</td>
+</tr>
+<tr>
+<td><strong>Reg H Ladder Calendar</strong></td>
+<td>每日赛事日历</td>
+<td>Bailey Max资源，几乎每天有！</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="article-footer">
+        <a href="../../index.html" class="back-link">← 返回首页</a>
+      </div>
+    </article>
+  
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>Powered by Markdown & GitHub Pages</p>
+    </div>
+  </footer>
+</body>
+</html>

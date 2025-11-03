@@ -1,0 +1,17 @@
+{
+  "name": "md-to-github-pages",
+  "version": "1.0.0",
+  "description": "将 Markdown 文件转换为美观的静态网站并部署到 GitHub Pages",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && npx http-server dist -o -c-1 --cors"
+  },
+  "dependencies": {
+    "marked": "^11.1.1",
+    "highlight.js": "^11.9.0",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

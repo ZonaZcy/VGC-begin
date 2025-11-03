@@ -1,0 +1,182 @@
+{
+  "main": {
+    "id": "ae712103065be6fe",
+    "type": "split",
+    "children": [
+      {
+        "id": "b61f75a8f7af236c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8c62f4e1887995c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01规则入门/02 6代及以后新增的机制.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "02 6代及以后新增的机制"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4b33365ea84b999c",
+    "type": "split",
+    "children": [
+      {
+        "id": "f4dbc89254b5a8fe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "80ef4b1cd3e9e5ca",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "d6fe9c12555aa884",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "bf1804cccd9bde7a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e00100b8023bee35",
+    "type": "split",
+    "children": [
+      {
+        "id": "cfbd0acb86e830b0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "730b9faf66b128cd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "01规则入门/02 6代及以后新增的机制.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "02 6代及以后新增的机制 的反向链接列表"
+            }
+          },
+          {
+            "id": "8440bb3e5bd9d8cf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "01规则入门/02 6代及以后新增的机制.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "02 6代及以后新增的机制 的出链列表"
+            }
+          },
+          {
+            "id": "ea0205f22b76da4e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "d205d1fed6904c2f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "01规则入门/02 6代及以后新增的机制.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "02 6代及以后新增的机制 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false
+    }
+  },
+  "active": "8c62f4e1887995c2",
+  "lastOpenFiles": [
+    "01规则入门/01 VGC入门.md",
+    "01规则入门/02 6代及以后新增的机制.md",
+    "pics",
+    "pics/Pasted image 20251103154834.png",
+    "02常见对战宝可梦",
+    "01规则入门",
+    "欢迎.md"
+  ]
+}

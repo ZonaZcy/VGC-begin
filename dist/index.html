@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首页</title>
+  <link rel="stylesheet" href="styles.css?v=1762160083876">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+  
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">🎮 宝可梦VGC入门学习</a>
+        <div class="nav-links">
+          <a href="index.html">首页</a>
+        </div>
+      </div>
+    </nav>
+  
+  <main class="container">
+    
+  <div class="hero">
+    <h1>宝可梦VGC入门学习</h1>
+    <p>Video Game Championships 双打对战学习指南</p>
+  </div>
+
+  <div class="search-box">
+    <input type="text" id="formatSearch" name="formatSearch" placeholder="搜索 frontmatter..." />
+  </div>
+
+  <div class="articles-list">
+    
+      <article class="article-card" data-frontmatter='{"title":"VGC入门","date":"2025-11-03T00:00:00.000Z","description":"这是一个VGC入门文档"}'>
+        <h2><a href="VGC/01规则入门/01 VGC入门.html">VGC入门</a></h2>
+        <div class="article-meta">
+          <span class="date">📅 2025-11-03</span>
+          <span class="category">📁 VGC/01规则入门</span>
+          
+        </div>
+        <p class="description">这是一个VGC入门文档</p>
+        <a href="VGC/01规则入门/01 VGC入门.html" class="read-more">阅读更多 →</a>
+      </article>
+    
+      <article class="article-card" data-frontmatter='{"title":"6代及以后新增的机制","date":"2025-11-03T00:00:00.000Z","description":"这文档介绍了6代及以后新增的对VGC有影响的机制"}'>
+        <h2><a href="VGC/01规则入门/02 6代及以后新增的机制.html">6代及以后新增的机制</a></h2>
+        <div class="article-meta">
+          <span class="date">📅 2025-11-03</span>
+          <span class="category">📁 VGC/01规则入门</span>
+          
+        </div>
+        <p class="description">这文档介绍了6代及以后新增的对VGC有影响的机制</p>
+        <a href="VGC/01规则入门/02 6代及以后新增的机制.html" class="read-more">阅读更多 →</a>
+      </article>
+    
+  </div>
+
+  <script>
+    // Frontmatter 模糊搜索功能
+    const searchInput = document.getElementById('formatSearch');
+    const articles = document.querySelectorAll('.article-card');
+
+    searchInput.addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase();
+
+      articles.forEach(article => {
+        const frontmatter = article.getAttribute('data-frontmatter').toLowerCase();
+        if (frontmatter.includes(searchTerm)) {
+          article.style.display = '';
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>Powered by Markdown & GitHub Pages</p>
+    </div>
+  </footer>
+</body>
+</html>

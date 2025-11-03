@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01规则入门/08 保护的使用.md",
+                "file": "01规则入门/06 天气与场地.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "08 保护的使用"
+              "title": "06 天气与场地"
             }
           }
         ]
@@ -183,12 +183,12 @@
   },
   "active": "f21d9656ce7a1922",
   "lastOpenFiles": [
+    "01规则入门/08 保护的使用.md",
     "01规则入门/07 异常状态.md",
     "01规则入门/06 天气与场地.md",
     "01规则入门/05 道具.md",
     "01规则入门/04 努力值.md",
     "pics/Pasted image 20251103234736.png",
-    "01规则入门/08 保护的使用.md",
     "pics/Pasted image 20251103231631.png",
     "pics/Pasted image 20251103230647.png",
     "01规则入门/02 6代及以后新增的机制.md",

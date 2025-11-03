@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b61f75a8f7af236c",
+        "id": "f2683b3d251c3e3d",
         "type": "tabs",
         "children": [
           {
-            "id": "8c62f4e1887995c2",
+            "id": "eeaf5ed62ae4fb5e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01规则入门/02 6代及以后新增的机制.md",
-                "mode": "preview",
-                "source": true
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "02 6代及以后新增的机制"
+              "title": "新标签页"
             }
           }
         ]
@@ -72,6 +68,18 @@
               "state": {},
               "icon": "lucide-bookmark",
               "title": "书签"
+            }
+          },
+          {
+            "id": "090ff5fa6360eba1",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "pics/Pasted image 20251103190314.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20251103190314"
             }
           }
         ]
@@ -169,12 +177,22 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "8c62f4e1887995c2",
+  "active": "eeaf5ed62ae4fb5e",
   "lastOpenFiles": [
-    "01规则入门/01 VGC入门.md",
+    "01规则入门/03 努力值训练完全指南.md",
+    "pics/Pasted image 20251103194401.png",
+    "pics/Pasted image 20251103194340.png",
+    "Pasted image 20251103194135.png",
+    "pics/Pasted image 20251103194257.png",
+    "pics/Pasted image 20251103193613.png",
+    "pics/Pasted image 20251103193018.png",
     "01规则入门/02 6代及以后新增的机制.md",
-    "pics",
+    "pics/Pasted image 20251103190239.png",
+    "pics/Pasted image 20251103190207.png",
     "pics/Pasted image 20251103154834.png",
+    "pics/Pasted image 20251103190314.png",
+    "01规则入门/01 VGC入门.md",
+    "pics",
     "02常见对战宝可梦",
     "01规则入门",
     "欢迎.md"

@@ -1,5 +1,5 @@
 ---
-title: VGC入门
+title: 01 VGC入门
 date: 2025-11-03
 description: 这是一个VGC入门文档
 ---
